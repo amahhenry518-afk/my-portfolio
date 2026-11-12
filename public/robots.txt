@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://my-portfolio-kelly-billions.vercel.app/sitemap.xml
+Sitemap: https://kellybillionz.vercel.app/sitemap.xml
