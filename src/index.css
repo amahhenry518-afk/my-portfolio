@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@property --hue { syntax: '<number>'; inherits: true; initial-value: 190; }
+
+:root, html[data-mode="dark"] {
+  --ink: #0B1220; --panel: #111B30; --line: #22304F; --mute: #8FA6D0; --fg: #E6EDF8;
+}
+html[data-mode="light"] {
+  --ink: #F4F7FC; --panel: #FFFFFF; --line: #D3DDEE; --mute: #4A628F; --fg: #0B1220;
+}
+
+html[data-accent="kelly"]    { --a1:#22D3EE; --a2:#2563EB; --a3:#7C3AED; --on:#fff; --link:#22D3EE; }
+html[data-accent="leaf"]     { --a1:#6EE7B7; --a2:#10B981; --a3:#14B8A6; --on:#06281c; --link:#34D399; }
+html[data-accent="flame"]    { --a1:#FBBF24; --a2:#F97316; --a3:#EF4444; --on:#2a1203; --link:#FB923C; }
+html[data-accent="bloom"]    { --a1:#F9A8D4; --a2:#EC4899; --a3:#A855F7; --on:#fff; --link:#F472B6; }
+html[data-accent="gold"]     { --a1:#FDE047; --a2:#FACC15; --a3:#F59E0B; --on:#2a2003; --link:#FACC15; }
+html[data-accent="spectrum"] {
+  --a1: hsl(var(--hue) 90% 65%); --a2: hsl(calc(var(--hue) + 50) 85% 55%); --a3: hsl(calc(var(--hue) + 100) 80% 60%);
+  --on:#0b1220; --link: hsl(var(--hue) 90% 65%);
+  animation: hue 30s linear infinite;
+}
+html[data-mode="light"][data-accent="kelly"]  { --link:#1D4ED8; }
+html[data-mode="light"][data-accent="leaf"]   { --link:#047857; }
+html[data-mode="light"][data-accent="flame"]  { --link:#C2410C; }
+html[data-mode="light"][data-accent="bloom"]  { --link:#BE185D; }
+html[data-mode="light"][data-accent="gold"]   { --link:#A16207; }
+html[data-mode="light"][data-accent="spectrum"] { --link: hsl(var(--hue) 80% 35%); }
+
+@keyframes hue { to { --hue: 550; } }
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-panel: var(--panel);
+  --color-line: var(--line);
+  --color-mute: var(--mute);
+  --color-fg: var(--fg);
+  --color-link: var(--link);
+  --color-on-accent: var(--on);
+  --color-a1: var(--a1);
+  --color-a2: var(--a2);
+  --color-a3: var(--a3);
+  --font-display: 'Sora', system-ui, sans-serif;
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--ink); color: var(--fg);
+  font-family: var(--font-sans); overflow-wrap: anywhere;
+  background-image:
+    radial-gradient(circle at 15% -10%, color-mix(in srgb, var(--a2) 18%, transparent), transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50V16L28 0l28 16v34L28 66zM28 100L0 84V66' fill='none' stroke='%238FA6D0' stroke-opacity='.07'/%3E%3C/svg%3E");
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+h1, h2, h3, button { font-family: var(--font-display); }
+
+.grad-text { background: linear-gradient(90deg, var(--a1), var(--a2), var(--a3)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.grad-bg { background: linear-gradient(135deg, var(--a1), var(--a2), var(--a3)); color: var(--on); }
+.hex { clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%); }
+
+.glass {
+  background: color-mix(in srgb, var(--panel) 78%, transparent);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--a1) 25%, transparent);
+}
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+.cursor-glow {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background: radial-gradient(300px circle at var(--mx, -999px) var(--my, -999px), color-mix(in srgb, var(--a2) 14%, transparent), transparent 70%);
+}
+@media (hover: none), (pointer: coarse) { .cursor-glow { display: none; } }
+
+.hex-ring { animation: spin 40s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+:focus-visible { outline: 2px solid var(--a1); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+  html[data-accent="spectrum"] { --hue: 190; }
+  .cursor-glow { display: none; }
+}

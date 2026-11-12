@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kelly-portfolio.vercel.app/sitemap.xml

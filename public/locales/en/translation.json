@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "contact": "Contact",
+    "menu": "Menu",
+    "skip": "Skip to content",
+    "home": "Home"
+  },
+  "lang": {
+    "label": "Language",
+    "search": "Search languages",
+    "none": "No language found",
+    "prev": "Previous",
+    "next": "Next",
+    "page": "{{from}} to {{to}} of {{total}}"
+  },
+  "theme": {
+    "mode": "Colour mode",
+    "dark": "Dark",
+    "light": "Light",
+    "accent": "Accent colour",
+    "kelly": "Kelly",
+    "leaf": "Leaf",
+    "flame": "Flame",
+    "bloom": "Bloom",
+    "gold": "Gold",
+    "spectrum": "Spectrum"
+  },
+  "hero": {
+    "role": "Full-Stack Web Developer",
+    "location": "Aba, Abia State, Nigeria",
+    "tagline": "I build fast, mobile-friendly websites for businesses and people who need to be found online.",
+    "ctaProjects": "See my projects",
+    "ctaContact": "Get in touch",
+    "photoAlt": "Portrait of {{alt}}"
+  },
+  "about": {
+    "title": "About",
+    "bio": "I am a Full-Stack Web Developer and Software Engineering student in Aba, Abia State, Nigeria. I build clean, quick websites that work well on a phone and that customers can use to call, book or order on WhatsApp.",
+    "focus": {
+      "build": {
+        "title": "Build",
+        "text": "React and Tailwind interfaces that load fast and read well on small screens."
+      },
+      "business": {
+        "title": "Business sites",
+        "text": "Websites for shops and services, with prices, opening hours and WhatsApp contact built in."
+      },
+      "ship": {
+        "title": "Ship",
+        "text": "Projects go live on Vercel straight from GitHub, so changes reach visitors in minutes."
+      }
+    },
+    "stackTitle": "Tech stack",
+    "groups": {
+      "frontend": "Front end",
+      "tooling": "Tooling",
+      "workflow": "Workflow"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "intro": "Two live websites I designed and built.",
+    "scope": {
+      "full": "Full stack",
+      "frontend": "Front end",
+      "frontendWip": "Front end, in progress"
+    },
+    "status": {
+      "flagship": "Flagship",
+      "live": "Live",
+      "wip": "In development"
+    },
+    "links": {
+      "live": "Visit live site",
+      "repo": "Source code",
+      "preview": "Preview"
+    },
+    "items": {
+      "barbershop": {
+        "summary": "A website for a barbershop. It lists services and prices in Naira, shows opening hours, and lets a customer pick a time and send the booking on WhatsApp.",
+        "captions": [
+          "Homepage",
+          "Services and prices",
+          "Booking form"
+        ]
+      },
+      "pentecost": {
+        "summary": "A website for a phones and accessories shop at Emeka Offor Plaza, Main Market. Customers browse products, tap one to ask for the price on WhatsApp, and find the shop on the map.",
+        "captions": [
+          "Homepage",
+          "Products",
+          "Contact"
+        ]
+      }
+    },
+    "moreImages_one": "{{count}} more screenshot",
+    "moreImages_other": "{{count}} more screenshots"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "issued": "Issued {{date}}",
+    "credential": "Credential ID: {{id}}",
+    "open": "View certificate"
+  },
+  "footer": {
+    "title": "Get in touch",
+    "text": "Have a website in mind? Send me a message and I will reply as soon as I can.",
+    "copy": "Copy email",
+    "copied": "Copied",
+    "top": "Back to top",
+    "rights": "All rights reserved."
+  },
+  "meta": {
+    "title": "Kelly Billionz | Full-Stack Web Developer in Aba, Abia State",
+    "description": "Amalunwoke Akachukwu (Kelly Billionz) is a Full-Stack Web Developer in Aba, Abia State, Nigeria. See his projects and get in touch."
+  },
+  "common": {
+    "close": "Close",
+    "previous": "Previous image",
+    "next": "Next image",
+    "imageCount": "Image {{from}} of {{to}}",
+    "missingImage": "Image coming soon: {{alt}}",
+    "opensNewTab": "opens in a new tab"
+  }
+}
