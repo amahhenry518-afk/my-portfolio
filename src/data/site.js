@@ -6,7 +6,9 @@ export const site = {
   stack: ['React', 'JavaScript', 'Tailwind CSS', 'Vercel'],
   links: {
     github: 'https://github.com/amahhenry518-afk',
-    facebook: 'https://www.facebook.com/share/19gtDVBfFn/?mibextid=wwXIfr',
+    facebook: 'https://www.facebook.com/share/1Fic6rM1nb/?mibextid=wwXIfr',
+    x: 'https://x.com/itskellybilionz?s=11',
+    instagram: 'https://www.instagram.com/itskellybillionz_',
     email: 'Amahhenry518@gmail.com',
   },
   location: 'Aba, Abia State, Nigeria',
