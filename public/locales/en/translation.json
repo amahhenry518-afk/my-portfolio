@@ -83,16 +83,14 @@
         "summary": "A website for a barbershop. It lists services and prices in Naira, shows opening hours, and lets a customer pick a time and send the booking on WhatsApp.",
         "captions": [
           "Homepage",
-          "Services and prices",
-          "Booking form"
+          "Storefront"
         ]
       },
       "pentecost": {
         "summary": "A website for a phones and accessories shop at Emeka Offor Plaza, Main Market. Customers browse products, tap one to ask for the price on WhatsApp, and find the shop on the map.",
         "captions": [
           "Homepage",
-          "Products",
-          "Contact"
+          "Inside the store"
         ]
       }
     },
